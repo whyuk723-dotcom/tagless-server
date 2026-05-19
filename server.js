@@ -45,6 +45,8 @@ app.get('/attendance', (req, res) => {
   res.json(attendance);
 });
 
-app.listen(3000, '0.0.0.0', () => {
-  console.log("서버 실행중 http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`서버 실행중 ${PORT}`);
 });
